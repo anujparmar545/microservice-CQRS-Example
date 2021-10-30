@@ -1,15 +1,18 @@
 
-###Command and Query Responsibility Segregation Pattern (CQRS)
+### Command and Query Responsibility Segregation Pattern (CQRS)
+
 ![img_1.png](img_1.png)
 
 ![img_2.png](img_2.png)
 
-Aggregate: Command Handler
-Projection: Query Handler
+**Aggregate**: Command Handler <br/>
+**Projection**: Query Handler
 
 Above flow is for command api. Query API flow is similar to this, but instead of Aggregate we use Projection as QueryHandler
 
-### For Event Store, we will use AXON Server. In order to run Axon server on docker
+### For H2 database console:  open http://localhost:8081/h2-console
+
+### For Event Store, we will use AXON Server. In order to run Axon server on docker (port 8024)
 ```
 docker run -d --name axonserver -p 8024:8024 -p 8124:8124 axoniq/axonserver
 ```
